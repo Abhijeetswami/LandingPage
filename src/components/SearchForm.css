@@ -1,0 +1,69 @@
+/* SearchForm.css */
+
+/* Container styles */
+.SearchForm{
+    width: 600px;
+    position: absolute;
+    left: 30%;
+    top: 100%;
+    margin: 20px;
+    
+
+}
+.bg-gray-100 {
+    background-color: #f0f0f0; /* Background color */
+  }
+  
+  /* Form container styles */
+  .rounded {
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #d1d1d1; /* Border color */
+  }
+  
+  /* Input field styles */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 400px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db; /* Highlight border color on focus */
+  }
+  
+  /* Search button styles */
+  button[type="submit"] {
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2980b9; /* Button background color on hover */
+  }
+  
+  /* Header styles */
+  .text-lg {
+    font-size: 24px; /* Header font size */
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    /* Decrease font size on smaller screens */
+    .text-lg {
+      font-size: 20px;
+    }
+  }
+  

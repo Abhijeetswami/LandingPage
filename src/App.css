@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* src/styles.css or src/App.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.min-h-screen {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+/* App.css */
+
+/* Styles for the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('wallpaperflare.com_wallpaper.jpg') center/cover no-repeat fixed;
+  position: relative; /* Make the body a positioning context for child elements */
 }
 
-.App-link {
-  color: #61dafb;
+/* Overlay with darker background color */
+.overlay-background {
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Place the darker overlay above the background image */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Overlay with lighter color */
+.overlay-form {
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 4px;
+  z-index: 2; /* Place the form overlay above the darker overlay */
+}
+
+@media (max-width: 768px) {
+  .overlay-form {
+    width: 90%;
+  }}
+.bg-white {
+  background-color: #200f0f;
+  box-shadow: 0px 4px 6px rgba(202, 73, 73, 0.1);
+}
+
+/* Style the form header */
+.text-2xl {
+  color: #333333;
+}
+
+/* Style the input fields */
+input[type="email"],
+input[type="password"] {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
 }
